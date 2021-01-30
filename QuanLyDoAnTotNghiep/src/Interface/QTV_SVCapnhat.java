@@ -2,10 +2,9 @@ package Interface;
 
 import Entity.SinhVien;
 import DAO.SinhVienDAO;
-import java.util.ArrayList;
-import java.util.List;
-import Interface.QTV_Sinhvien;
-import javax.swing.DefaultComboBoxModel;
+import java.sql.*;
+import java.util.*;
+import javax.swing.*;
 
 public class QTV_SVCapnhat extends javax.swing.JFrame {
 
@@ -429,6 +428,7 @@ public class QTV_SVCapnhat extends javax.swing.JFrame {
                     jTextField6.getText(), jTextField4.getText(),
                     Integer.parseInt(jTextField10.getText()), Float.parseFloat(jTextField11.getText()));
             this.dispose();
+
         }
     }//GEN-LAST:event_jButton5ActionPerformed
 

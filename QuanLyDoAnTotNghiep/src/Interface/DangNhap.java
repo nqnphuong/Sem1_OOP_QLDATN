@@ -1,13 +1,8 @@
 package Interface;
 
-
-import com.sun.jdi.connect.spi.Connection;
 import javax.swing.*;
 import java.sql.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.Vector;
-import javax.security.auth.spi.LoginModule;
+import java.util.*;
 
 public class DangNhap extends javax.swing.JFrame {
     public DangNhap() {
@@ -17,9 +12,6 @@ public class DangNhap extends javax.swing.JFrame {
         setTitle("QUẢN LÝ ĐỒ ÁN TỐT NGHIỆP");
 
     }
-
-    
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -120,16 +112,14 @@ public class DangNhap extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Vui lòng nhập mật khẩu!\n", "Thông báo", JOptionPane.ERROR_MESSAGE);
         } else {
             try {
-                String dbURL = "jdbc:sqlserver://localhost:1433;databaseName=QuanLyDoAn;user=Funny;password=201848270";
-                java.sql.Connection conn = DriverManager.getConnection(dbURL);
-                Statement sm = conn.createStatement();
+                java.sql.Connection connection = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=QuanLyDoAn;user=Funny;password=201848270");
                 String sql = ("SELECT * FROM dbo.DangNhap "
                         + "WHERE MaDN=? AND MatKhau=? ");
-                PreparedStatement ps = conn.prepareStatement(sql);
-                ps.setString(1, jTextField1.getText());
-                ps.setString(2, jPasswordField1.getText());
-                ResultSet rs = ps.executeQuery();
-                if (rs.next()) {
+                PreparedStatement statement = connection.prepareStatement(sql);
+                statement.setString(1, jTextField1.getText());
+                statement.setString(2, jPasswordField1.getText());
+                ResultSet resultSet = statement.executeQuery();
+                if (resultSet.next()) {
                         this.dispose();
                         new QTV_Giaodienchinh();
                 } else {

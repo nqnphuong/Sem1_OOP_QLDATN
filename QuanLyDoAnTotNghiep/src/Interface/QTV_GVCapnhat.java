@@ -2,8 +2,9 @@ package Interface;
 
 import Entity.GiangVien;
 import DAO.GiangVienDAO;
-import java.util.ArrayList;
-import java.util.List;
+import java.sql.*;
+import java.util.*;
+import javax.swing.*;
 
 
 public class QTV_GVCapnhat extends javax.swing.JFrame {
@@ -206,8 +207,7 @@ public class QTV_GVCapnhat extends javax.swing.JFrame {
             a.ThemGV(jTextField2.getText(),jTextField1.getText() ,jTextField3.getText(),
                     jTextField7.getText(),jTextField8.getText());
             this.dispose();
-
-        }
+        } 
         if (this.getTitle() == "CHỈNH SỬA") {
             GiangVien gv = new GiangVien(jTextField2.getText(),jTextField1.getText() ,jTextField3.getText(),
                     jTextField7.getText(),jTextField8.getText());
@@ -215,8 +215,7 @@ public class QTV_GVCapnhat extends javax.swing.JFrame {
             a.ThemGV(jTextField2.getText(),jTextField1.getText() ,jTextField3.getText(),
                     jTextField7.getText(),jTextField8.getText());
             this.dispose();
-
-        }
+        } 
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed

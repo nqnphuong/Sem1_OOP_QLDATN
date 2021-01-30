@@ -1,6 +1,9 @@
 
 package Interface;
 
+import DAO.SinhVienDAO;
+import javax.swing.JOptionPane;
+
 public class QTV_Giaodienchinh extends javax.swing.JFrame {
 
     public QTV_Giaodienchinh() {
@@ -93,8 +96,11 @@ public class QTV_Giaodienchinh extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        this.dispose();
-        new DangNhap();
+        int option = JOptionPane.showConfirmDialog(this, "Bạn có muốn thoát không ? ");
+            if (option == 0) {
+                this.dispose();
+                new DangNhap();
+            }
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

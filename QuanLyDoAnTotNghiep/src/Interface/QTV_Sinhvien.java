@@ -3,11 +3,10 @@ package Interface;
 
 import Entity.SinhVien;
 import DAO.SinhVienDAO;
-import javax.swing.table.DefaultTableModel;
 import java.sql.*;
 import java.util.*;
-import javax.swing.JOptionPane;
-import javax.swing.text.html.parser.Entity;
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 
 public class QTV_Sinhvien extends javax.swing.JFrame {
     DefaultTableModel dtb;

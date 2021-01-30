@@ -1,16 +1,9 @@
 package DAO;
 
 import Entity.SinhVien;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.sql.*;
+import java.util.*;
+import javax.swing.*;
 
 public class SinhVienDAO {
 
@@ -39,24 +32,10 @@ public class SinhVienDAO {
                         resultSet.getFloat("Diem"));
                 SinhVienList.add(sv);
             }
-        } catch (SQLException ex) {
-            Logger.getLogger(SinhVienDAO.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            if (statement != null) {
-                try {
-                    statement.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(SinhVienDAO.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(SinhVienDAO.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        }
+            connection.close();
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        } 
         return SinhVienList;
     }
 
@@ -69,24 +48,10 @@ public class SinhVienDAO {
             statement = connection.prepareCall(sql);
             statement.setString(1, MaSV);
             statement.execute();
-        } catch (SQLException ex) {
-            Logger.getLogger(SinhVienDAO.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            if (statement != null) {
-                try {
-                    statement.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(SinhVienDAO.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(SinhVienDAO.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        }
+            connection.close();
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        } 
     }
 
     public static void Them(SinhVien sv) {
@@ -109,24 +74,10 @@ public class SinhVienDAO {
             statement.setInt(11, sv.getMaDA());
             statement.setFloat(12, sv.getDiem());
             statement.execute();
-        } catch (SQLException ex) {
-            Logger.getLogger(SinhVienDAO.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            if (statement != null) {
-                try {
-                    statement.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(SinhVienDAO.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(SinhVienDAO.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        }
+            connection.close();
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        } 
     }
 
     public static void ChinhSua(SinhVien sv) {
@@ -149,24 +100,10 @@ public class SinhVienDAO {
             statement.setFloat(11, sv.getDiem());
             statement.setString(12, sv.getMaSV());
             statement.execute();
-        } catch (SQLException ex) {
-            Logger.getLogger(SinhVienDAO.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            if (statement != null) {
-                try {
-                    statement.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(SinhVienDAO.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(SinhVienDAO.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        }
+            connection.close();
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        } 
     }
 
     public static List<SinhVien> Tim(String TenSV) {
@@ -196,24 +133,10 @@ public class SinhVienDAO {
                         resultSet.getFloat("Diem"));
                 SinhVienList.add(sv);
             }
-        } catch (SQLException ex) {
-            Logger.getLogger(SinhVienDAO.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            if (statement != null) {
-                try {
-                    statement.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(SinhVienDAO.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(SinhVienDAO.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        }
+            connection.close();
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        } 
         return SinhVienList;
     }
 }

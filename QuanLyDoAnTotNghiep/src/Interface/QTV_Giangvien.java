@@ -3,11 +3,9 @@ package Interface;
 
 import Entity.GiangVien;
 import DAO.GiangVienDAO;
-import Entity.SinhVien;
-import DAO.SinhVienDAO;
-import java.util.ArrayList;
-import java.util.List;
-import javax.swing.JOptionPane;
+import java.sql.*;
+import java.util.*;
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
 public class QTV_Giangvien extends javax.swing.JFrame {

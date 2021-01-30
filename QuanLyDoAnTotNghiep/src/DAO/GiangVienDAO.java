@@ -1,16 +1,9 @@
 
 package DAO;
 import Entity.GiangVien;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.sql.*;
+import java.util.*;
+import javax.swing.*;
 
 public class GiangVienDAO {
     public static List<GiangVien> findAll() {
@@ -37,24 +30,10 @@ public class GiangVienDAO {
                         
                 GiangVienList.add(gv);
             }
-        } catch (SQLException ex) {
-            Logger.getLogger(GiangVienDAO.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            if (statement != null) {
-                try {
-                    statement.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(GiangVienDAO.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(GiangVienDAO.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        }
+            connection.close();
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        } 
         return GiangVienList;
     }
     public static void Xoa(String MaGV) {
@@ -66,24 +45,10 @@ public class GiangVienDAO {
             statement = connection.prepareCall(sql);
             statement.setString(1,MaGV);
             statement.execute();
-        } catch (SQLException ex) {
-            Logger.getLogger(GiangVienDAO.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            if (statement != null) {
-                try {
-                    statement.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(GiangVienDAO.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(GiangVienDAO.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        }
+            connection.close();
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        } 
     }
 
     public static void Them(GiangVien gv) {
@@ -99,31 +64,17 @@ public class GiangVienDAO {
             statement.setString(4, gv.getEmail());
             statement.setString(5, gv.getSDT());
             statement.execute();
-        } catch (SQLException ex) {
-            Logger.getLogger(GiangVien.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            if (statement != null) {
-                try {
-                    statement.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(GiangVien.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(GiangVien.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        }
+            connection.close();
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        } 
     }
         public static void ChinhSua(GiangVien gv) {
         Connection connection = null;
         PreparedStatement statement = null;        
         try {
             connection = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=QuanLyDoAn;user=Funny;password=201848270");
-            String sql = "update GiangVien set  Hodem=?, TenGV=?, Email=?, SDT=?, MaGV=?";
+            String sql = "update GiangVien set Hodem=?, TenGV=?, Email=?, SDT=? where MaGV=?";
             statement = connection.prepareCall(sql);                       
             statement.setString(1, gv.getHoDem());
             statement.setString(2, gv.getTenGV());           
@@ -131,24 +82,10 @@ public class GiangVienDAO {
             statement.setString(4, gv.getSDT());
             statement.setString(5, gv.getMaGV());            
             statement.execute();
-        } catch (SQLException ex) {
-            Logger.getLogger(GiangVien.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            if (statement != null) {
-                try {
-                    statement.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(GiangVien.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(GiangVien.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        }
+            connection.close();
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        } 
     }
     public static List<GiangVien> Tim(String TenGV) {
         List<GiangVien> GiangVienList = new ArrayList<>();
@@ -169,24 +106,10 @@ public class GiangVienDAO {
                         resultSet.getString("SDT"));                             
                 GiangVienList.add(gv);
             }
-        } catch (SQLException ex) {
-            Logger.getLogger(GiangVien.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            if (statement != null) {
-                try {
-                    statement.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(GiangVien.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(GiangVien.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        }
+            connection.close();
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        } 
         return GiangVienList;
     }
 }

@@ -23,7 +23,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" pref="1000" max="32767" attributes="0"/>
+          <Component id="jPanel1" min="-2" pref="1001" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -68,11 +68,11 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="5" green="30" red="50" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="___________________________________"/>
+            <Property name="text" type="java.lang.String" value="____________________________________"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="320" y="40" width="-1" height="-1"/>
+              <AbsoluteConstraints x="330" y="40" width="-1" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -88,11 +88,11 @@
               <Color blue="5" green="30" red="50" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="TH&#xd4;NG TIN &#x110;&#x1ed2; &#xc1;N"/>
+            <Property name="text" type="java.lang.String" value="TH&#xd4;NG TIN GI&#x1ea2;NG VI&#xca;N"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="380" y="20" width="-1" height="-1"/>
+              <AbsoluteConstraints x="360" y="20" width="-1" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -102,7 +102,7 @@
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="40" y="80" width="910" height="320"/>
+              <AbsoluteConstraints x="40" y="80" width="910" height="330"/>
             </Constraint>
           </Constraints>
 
@@ -111,14 +111,32 @@
             <Component class="javax.swing.JTable" name="jTable1">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="3" rowCount="0">
-                    <Column editable="false" title="M&#xe3; &#x111;&#x1ed3; &#xe1;n" type="java.lang.Object"/>
-                    <Column editable="false" title="T&#xea;n &#x111;&#x1ed3; &#xe1;n" type="java.lang.Object"/>
-                    <Column editable="false" title="S&#x1ed1; l&#x1b0;&#x1a1;ng sinh vi&#xea;n &#x111;&#x103;ng k&#xfd;" type="java.lang.Object"/>
+                  <Table columnCount="6" rowCount="0">
+                    <Column editable="false" title="M&#xe3; GV" type="java.lang.Object"/>
+                    <Column editable="false" title="H&#x1ecd; &#x111;&#x1ec7;m" type="java.lang.Object"/>
+                    <Column editable="false" title="T&#xea;n GV" type="java.lang.Object"/>
+                    <Column editable="true" title="Email" type="java.lang.Object"/>
+                    <Column editable="false" title="S&#x110;T" type="java.lang.Object"/>
+                    <Column editable="true" title="S&#x1ed1; l&#x1b0;&#x1ee3;ng sinh vi&#xea;n h&#x1b0;&#x1edb;ng d&#x1eab;n" type="java.lang.Object"/>
                   </Table>
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                   <TableColumnModel selectionModel="0">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
                     <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                       <Title/>
                       <Editor/>
@@ -189,7 +207,6 @@
               <Image iconType="3" name="/Image/trash.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Xo&#xe1;"/>
-            <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>

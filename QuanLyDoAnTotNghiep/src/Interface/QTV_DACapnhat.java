@@ -2,12 +2,9 @@ package Interface;
 
 import Entity.DoAn;
 import DAO.DoAnDAO;
-import Entity.GiangVien;
-import DAO.GiangVienDAO;
-import java.util.ArrayList;
-import java.util.List;
-import javax.management.StringValueExp;
-
+import java.sql.*;
+import java.util.*;
+import javax.swing.*;
 
 public class QTV_DACapnhat extends javax.swing.JFrame {
 
@@ -156,14 +153,12 @@ public class QTV_DACapnhat extends javax.swing.JFrame {
             DoAnDAO.Them(da);
             a.ThemDA(Integer.parseInt(jTextField1.getText()),jTextField2.getText());
             this.dispose();
-
         }
         if (this.getTitle() == "CHỈNH SỬA") {
             DoAn da = new DoAn(Integer.parseInt(jTextField1.getText()),jTextField2.getText());
             DoAnDAO.ChinhSua(da);
             a.ThemDA(Integer.parseInt(jTextField1.getText()),jTextField2.getText());
             this.dispose();
-
         }
     }//GEN-LAST:event_jButton5ActionPerformed
 

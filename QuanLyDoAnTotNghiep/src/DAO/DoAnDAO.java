@@ -2,16 +2,9 @@
 package DAO;
 
 import Entity.DoAn;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.sql.*;
+import java.util.*;
+import javax.swing.*;
 
 public class DoAnDAO {
     public static List<DoAn> findAll() {
@@ -35,24 +28,10 @@ public class DoAnDAO {
                         resultSet.getInt("SoLuong"));
                 DoAnList.add(da);
             }
-        } catch (SQLException ex) {
-            Logger.getLogger(DoAnDAO.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            if (statement != null) {
-                try {
-                    statement.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(DoAnDAO.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(DoAnDAO.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        }
+            connection.close();
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        } 
         return DoAnList;
     }
     
@@ -65,24 +44,10 @@ public class DoAnDAO {
             statement = connection.prepareCall(sql);
             statement.setInt(1, MaDA);
             statement.execute();
-        } catch (SQLException ex) {
-            Logger.getLogger(DoAnDAO.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            if (statement != null) {
-                try {
-                    statement.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(DoAnDAO.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(DoAnDAO.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        }
+            connection.close();
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        } 
     }
 
     public static void Them(DoAn da) {
@@ -95,24 +60,11 @@ public class DoAnDAO {
             statement.setInt(1, da.getMaDA());
             statement.setString(2, da.getTenDA());
             statement.execute();
-        } catch (SQLException ex) {
-            Logger.getLogger(DoAnDAO.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            if (statement != null) {
-                try {
-                    statement.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(DoAnDAO.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(DoAnDAO.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        }
+            connection.close();
+        } catch (Exception ex) {
+            
+            System.out.println(ex.getMessage());
+        } 
     }
     
     public static void ChinhSua(DoAn da) {
@@ -125,31 +77,16 @@ public class DoAnDAO {
             statement.setString(1, da.getTenDA());
             statement.setInt(2, da.getMaDA());              
             statement.execute();
-        } catch (SQLException ex) {
-            Logger.getLogger(DoAnDAO.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            if (statement != null) {
-                try {
-                    statement.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(DoAnDAO.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(DoAnDAO.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        }
+            connection.close();
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        } 
     }
     
     public static List<DoAn> Tim(String TenDA) {
         List<DoAn> DoAnList = new ArrayList<>();
         Connection connection = null;
         PreparedStatement statement = null;
-        
         try {
             connection = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=QuanLyDoAn;user=Funny;password=201848270");
             String sql = "select * from DoAn where TenDA like ?";
@@ -162,24 +99,10 @@ public class DoAnDAO {
                         resultSet.getString("TenDA"));                                
                 DoAnList.add(da);
             }
-        } catch (SQLException ex) {
-            Logger.getLogger(DoAnDAO.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            if (statement != null) {
-                try {
-                    statement.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(DoAnDAO.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(DoAnDAO.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        }
+            connection.close();
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        } 
         return DoAnList;
     }
 }

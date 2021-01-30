@@ -2,13 +2,9 @@ package Interface;
 
 import Entity.DoAn;
 import DAO.DoAnDAO;
-import Entity.GiangVien;
-import DAO.GiangVienDAO;
-import Entity.SinhVien;
-import DAO.SinhVienDAO;
-import java.util.ArrayList;
-import java.util.List;
-import javax.swing.JOptionPane;
+import java.sql.*;
+import java.util.*;
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
 public class QTV_DoAn extends javax.swing.JFrame {
@@ -65,14 +61,14 @@ public class QTV_DoAn extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("#9Slide07 IcielBC Cubano Normal", 0, 15)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(80, 48, 5));
         jLabel3.setText("___________________________________");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 50, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, -1, -1));
 
         jLabel2.setBackground(new java.awt.Color(246, 172, 15));
         jLabel2.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 20)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(80, 48, 5));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("THÔNG TIN ĐỒ ÁN");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 20, -1, -1));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
