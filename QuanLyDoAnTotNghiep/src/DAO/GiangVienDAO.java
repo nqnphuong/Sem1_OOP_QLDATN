@@ -6,7 +6,7 @@ import java.util.*;
 import javax.swing.*;
 
 public class GiangVienDAO {
-    public static List<GiangVien> findAll() {
+    public static List<GiangVien> HienThi() {
         List<GiangVien> GiangVienList = new ArrayList<>();
         java.sql.Connection connection = null;
         Statement statement = null;

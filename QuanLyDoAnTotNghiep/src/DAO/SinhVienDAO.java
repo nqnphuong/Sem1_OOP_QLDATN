@@ -7,7 +7,7 @@ import javax.swing.*;
 
 public class SinhVienDAO {
 
-    public static List<SinhVien> findAll() {
+    public static List<SinhVien> HienThi() {
         List<SinhVien> SinhVienList = new ArrayList<>();
         java.sql.Connection connection = null;
         Statement statement = null;

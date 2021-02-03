@@ -23,7 +23,7 @@ public class QTV_Giangvien extends javax.swing.JFrame {
     }
 
     public void showGiangVien() {
-        GiangVienList = GiangVienDAO.findAll();
+        GiangVienList = GiangVienDAO.HienThi();
 
         dtb.setRowCount(0);
 
@@ -48,6 +48,7 @@ public class QTV_Giangvien extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jButton8 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
@@ -95,6 +96,20 @@ public class QTV_Giangvien extends javax.swing.JFrame {
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 910, 330));
 
+        jButton8.setBackground(new java.awt.Color(246, 172, 15));
+        jButton8.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
+        jButton8.setForeground(new java.awt.Color(80, 48, 5));
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/refresh-page-option.png"))); // NOI18N
+        jButton8.setText("Quay lại");
+        jButton8.setBorder(null);
+        jButton8.setPreferredSize(new java.awt.Dimension(50, 25));
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 110, 30));
+
         jButton3.setBackground(new java.awt.Color(246, 172, 15));
         jButton3.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
         jButton3.setForeground(new java.awt.Color(80, 48, 5));
@@ -107,7 +122,7 @@ public class QTV_Giangvien extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 120, 30));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 430, 110, 30));
 
         jButton4.setBackground(new java.awt.Color(246, 172, 15));
         jButton4.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
@@ -121,7 +136,7 @@ public class QTV_Giangvien extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 430, 120, 30));
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 430, 110, 30));
 
         jButton7.setBackground(new java.awt.Color(80, 48, 5));
         jButton7.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
@@ -135,7 +150,7 @@ public class QTV_Giangvien extends javax.swing.JFrame {
                 jButton7ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 430, 120, 30));
+        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 430, 110, 30));
 
         jButton6.setBackground(new java.awt.Color(246, 172, 15));
         jButton6.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
@@ -149,7 +164,7 @@ public class QTV_Giangvien extends javax.swing.JFrame {
                 jButton6ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 430, 120, 30));
+        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 430, 110, 30));
 
         jButton5.setBackground(new java.awt.Color(246, 172, 15));
         jButton5.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
@@ -163,7 +178,7 @@ public class QTV_Giangvien extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 430, 120, 30));
+        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 430, 110, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/nen.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 990, -1));
@@ -239,6 +254,10 @@ public class QTV_Giangvien extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         new QTV_GVCapnhat(this, "THÊM", null, null, null, null, null);
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        showGiangVien();
+    }//GEN-LAST:event_jButton8ActionPerformed
     public void ThemGV(String MaGV, String HoDem, String TenGV, String Email, String SDT) {
         showGiangVien();
     }
@@ -250,6 +269,7 @@ public class QTV_Giangvien extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

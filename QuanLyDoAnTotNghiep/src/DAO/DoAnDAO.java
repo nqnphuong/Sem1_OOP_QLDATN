@@ -1,4 +1,3 @@
-
 package DAO;
 
 import Entity.DoAn;
@@ -7,11 +6,10 @@ import java.util.*;
 import javax.swing.*;
 
 public class DoAnDAO {
-    public static List<DoAn> findAll() {
+    public static List<DoAn> HienThi() {
         List<DoAn> DoAnList = new ArrayList<>();
         java.sql.Connection connection = null;
         Statement statement = null;
-
         try {
             connection = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=QuanLyDoAn;user=Funny;password=201848270");
             String sql = "select da.MaDA,da.TenDA, COUNT(sv.MaSV) as 'SoLuong'\n" +
@@ -61,8 +59,7 @@ public class DoAnDAO {
             statement.setString(2, da.getTenDA());
             statement.execute();
             connection.close();
-        } catch (Exception ex) {
-            
+        } catch (Exception ex) {          
             System.out.println(ex.getMessage());
         } 
     }
@@ -72,7 +69,7 @@ public class DoAnDAO {
         PreparedStatement statement = null;
         try {
             connection = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=QuanLyDoAn;user=Funny;password=201848270");
-            String sql = "update DoAn set  TenDA=? where MaDA=?";
+            String sql = "update DoAn set TenDA=? where MaDA=?";
             statement = connection.prepareCall(sql);                    
             statement.setString(1, da.getTenDA());
             statement.setInt(2, da.getMaDA());              
