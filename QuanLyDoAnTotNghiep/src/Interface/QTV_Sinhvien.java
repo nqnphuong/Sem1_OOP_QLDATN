@@ -92,7 +92,34 @@ public class QTV_Sinhvien extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
         if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(9).setResizable(false);
+            jTable1.getColumnModel().getColumn(0).setMaxWidth(50);
+            jTable1.getColumnModel().getColumn(1).setMinWidth(140);
+            jTable1.getColumnModel().getColumn(1).setPreferredWidth(140);
+            jTable1.getColumnModel().getColumn(1).setMaxWidth(140);
+            jTable1.getColumnModel().getColumn(2).setMinWidth(60);
+            jTable1.getColumnModel().getColumn(2).setPreferredWidth(60);
+            jTable1.getColumnModel().getColumn(2).setMaxWidth(60);
+            jTable1.getColumnModel().getColumn(3).setMinWidth(60);
+            jTable1.getColumnModel().getColumn(3).setPreferredWidth(60);
+            jTable1.getColumnModel().getColumn(3).setMaxWidth(60);
+            jTable1.getColumnModel().getColumn(4).setMinWidth(70);
+            jTable1.getColumnModel().getColumn(4).setPreferredWidth(70);
+            jTable1.getColumnModel().getColumn(4).setMaxWidth(70);
+            jTable1.getColumnModel().getColumn(5).setMinWidth(120);
+            jTable1.getColumnModel().getColumn(5).setPreferredWidth(120);
+            jTable1.getColumnModel().getColumn(5).setMaxWidth(120);
+            jTable1.getColumnModel().getColumn(6).setMinWidth(80);
+            jTable1.getColumnModel().getColumn(6).setPreferredWidth(80);
+            jTable1.getColumnModel().getColumn(6).setMaxWidth(80);
+            jTable1.getColumnModel().getColumn(9).setMinWidth(50);
+            jTable1.getColumnModel().getColumn(9).setPreferredWidth(50);
+            jTable1.getColumnModel().getColumn(9).setMaxWidth(50);
+            jTable1.getColumnModel().getColumn(10).setMinWidth(50);
+            jTable1.getColumnModel().getColumn(10).setPreferredWidth(50);
+            jTable1.getColumnModel().getColumn(10).setMaxWidth(50);
+            jTable1.getColumnModel().getColumn(11).setMinWidth(50);
+            jTable1.getColumnModel().getColumn(11).setPreferredWidth(50);
+            jTable1.getColumnModel().getColumn(11).setMaxWidth(50);
         }
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 910, 330));
@@ -240,7 +267,7 @@ public class QTV_Sinhvien extends javax.swing.JFrame {
             String Khoa = String.valueOf(jTable1.getValueAt(row, 7));
             String Nganh = String.valueOf(jTable1.getValueAt(row, 8));
             String MaGV = String.valueOf(jTable1.getValueAt(row, 9));
-            int MaDA = (int) jTable1.getValueAt(row, 10);
+            String MaDA = String.valueOf(jTable1.getValueAt(row, 10));
             float Diem = (float) jTable1.getValueAt(row, 11);
 
             new QTV_SVCapnhat(this, "CHỈNH SỬA", MaSV, Hodem, TenSV, GioiTinh, NgaySinh, Email, SDT, Khoa, Nganh, MaGV, MaDA, Diem);
@@ -249,11 +276,11 @@ public class QTV_Sinhvien extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        new QTV_SVCapnhat(this, "THÊM", null, null, null, null, null, null, null, null, null, null, 0, 0);
+        new QTV_SVCapnhat(this, "THÊM", null, null, null, null, null, null, null, null, null, null, null, 0);
 
     }//GEN-LAST:event_jButton5ActionPerformed
     public void ThemSV(String MaSV, String HoDem, String TenSV, String GioiTinh, String NgaySinh,
-            String Email, String SDT, String Khoa, String Nganh, String MaGV, int MaDA, float Diem) {
+            String Email, String SDT, String Khoa, String Nganh, String MaGV, String MaDA, float Diem) {
         showSinhVien();
     }
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed

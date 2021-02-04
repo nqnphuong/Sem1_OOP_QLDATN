@@ -28,7 +28,7 @@ public class SinhVienDAO {
                         resultSet.getString("Khoa"),
                         resultSet.getString("Nganh"),
                         resultSet.getString("MaGV"),
-                        resultSet.getInt("MaDA"),
+                        resultSet.getString("MaDA"),
                         resultSet.getFloat("Diem"));
                 SinhVienList.add(sv);
             }
@@ -71,7 +71,7 @@ public class SinhVienDAO {
             statement.setString(8, sv.getKhoa());
             statement.setString(9, sv.getNganh());
             statement.setString(10, sv.getMaGV());
-            statement.setInt(11, sv.getMaDA());
+            statement.setString(11, sv.getMaDA());
             statement.setFloat(12, sv.getDiem());
             statement.execute();
             connection.close();
@@ -96,7 +96,7 @@ public class SinhVienDAO {
             statement.setString(7, sv.getKhoa());
             statement.setString(8, sv.getNganh());
             statement.setString(9, sv.getMaGV());
-            statement.setInt(10, sv.getMaDA());
+            statement.setString(10, sv.getMaDA());
             statement.setFloat(11, sv.getDiem());
             statement.setString(12, sv.getMaSV());
             statement.execute();
@@ -129,7 +129,7 @@ public class SinhVienDAO {
                         resultSet.getString("Khoa"),
                         resultSet.getString("Nganh"),
                         resultSet.getString("MaGV"),
-                        resultSet.getInt("MaDA"),
+                        resultSet.getString("MaDA"),
                         resultSet.getFloat("Diem"));
                 SinhVienList.add(sv);
             }

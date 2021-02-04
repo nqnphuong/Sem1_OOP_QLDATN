@@ -2,17 +2,17 @@ package Entity;
 
 public class DoAn {
 
-    public int MaDA;
+    public String MaDA;
     public String TenDA;
     public int SoLuong;
 
-    public DoAn(int MaDA, String TenDA, int SoLuong) {
+    public DoAn(String MaDA, String TenDA, int SoLuong) {
         this.MaDA = MaDA;
         this.TenDA = TenDA;
         this.SoLuong = SoLuong;
     }
 
-    public DoAn(int MaDA, String TenDA) {
+    public DoAn(String MaDA, String TenDA) {
         this.MaDA = MaDA;
         this.TenDA = TenDA;
     }
@@ -25,11 +25,11 @@ public class DoAn {
         this.SoLuong = SoLuong;
     }
 
-    public int getMaDA() {
+    public String getMaDA() {
         return MaDA;
     }
 
-    public void setMaDA(int MaDA) {
+    public void setMaDA(String MaDA) {
         this.MaDA = MaDA;
     }
 

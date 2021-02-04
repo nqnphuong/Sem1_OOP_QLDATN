@@ -42,6 +42,7 @@ public class QTV_GVCapnhat extends javax.swing.JFrame {
         jTextField7 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
         jButton7 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
@@ -141,6 +142,11 @@ public class QTV_GVCapnhat extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(80, 48, 5));
         jLabel3.setText("____________________________________");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, -1, -1));
+
+        jLabel13.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(138, 102, 53));
+        jLabel13.setText("(GVxxx)");
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, -1, 30));
 
         jButton7.setBackground(new java.awt.Color(80, 48, 5));
         jButton7.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
@@ -249,6 +255,7 @@ public class QTV_GVCapnhat extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

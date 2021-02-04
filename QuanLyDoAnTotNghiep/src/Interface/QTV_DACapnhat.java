@@ -10,13 +10,13 @@ public class QTV_DACapnhat extends javax.swing.JFrame {
 
     QTV_DoAn a;
 
-    public QTV_DACapnhat(QTV_DoAn a, String title, int MaDA, String TenDA) {
+    public QTV_DACapnhat(QTV_DoAn a, String title, String MaDA, String TenDA) {
         super(title);
         initComponents();
         setVisible(true);
         setResizable(false);
         this.a = a;
-        jTextField1.setText(String.valueOf(MaDA));
+        jTextField1.setText(MaDA);
         jTextField2.setText(TenDA);
     }
 
@@ -34,6 +34,7 @@ public class QTV_DACapnhat extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -132,6 +133,11 @@ public class QTV_DACapnhat extends javax.swing.JFrame {
         });
         jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 120, 30));
 
+        jLabel13.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(138, 102, 53));
+        jLabel13.setText("(DAxxx)");
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, -1, 30));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -149,15 +155,15 @@ public class QTV_DACapnhat extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         if (this.getTitle() == "THÊM") {
-            DoAn da = new DoAn(Integer.parseInt(jTextField1.getText()),jTextField2.getText());
+            DoAn da = new DoAn(jTextField1.getText(),jTextField2.getText());
             DoAnDAO.Them(da);
-            a.ThemDA(Integer.parseInt(jTextField1.getText()),jTextField2.getText());
+            a.ThemDA(jTextField1.getText(),jTextField2.getText());
             this.dispose();
         }
         if (this.getTitle() == "CHỈNH SỬA") {
-            DoAn da = new DoAn(Integer.parseInt(jTextField1.getText()),jTextField2.getText());
+            DoAn da = new DoAn(jTextField1.getText(),jTextField2.getText());
             DoAnDAO.ChinhSua(da);
-            a.ThemDA(Integer.parseInt(jTextField1.getText()),jTextField2.getText());
+            a.ThemDA(jTextField1.getText(),jTextField2.getText());
             this.dispose();
         }
     }//GEN-LAST:event_jButton5ActionPerformed
@@ -165,8 +171,7 @@ public class QTV_DACapnhat extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         jTextField1.setText("");
         jTextField2.setText("");
-        
-       
+          
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
@@ -186,6 +191,7 @@ public class QTV_DACapnhat extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton7;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;

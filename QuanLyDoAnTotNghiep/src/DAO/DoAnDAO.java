@@ -21,7 +21,7 @@ public class DoAnDAO {
             ResultSet resultSet = statement.executeQuery(sql);
             while (resultSet.next()) {
                 DoAn da = new DoAn(
-                        resultSet.getInt("MaDA"),
+                        resultSet.getString("MaDA"),
                         resultSet.getString("TenDA"),
                         resultSet.getInt("SoLuong"));
                 DoAnList.add(da);
@@ -33,14 +33,14 @@ public class DoAnDAO {
         return DoAnList;
     }
     
-    public static void Xoa(int MaDA) {
+    public static void Xoa(String MaDA) {
         Connection connection = null;
         PreparedStatement statement = null;
         try {
             connection = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=QuanLyDoAn;user=Funny;password=201848270");
             String sql = "delete from DoAn where MaDA=?";
             statement = connection.prepareCall(sql);
-            statement.setInt(1, MaDA);
+            statement.setString(1, MaDA);
             statement.execute();
             connection.close();
         } catch (Exception ex) {
@@ -55,7 +55,7 @@ public class DoAnDAO {
             connection = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=QuanLyDoAn;user=Funny;password=201848270");
             String sql = "insert into DoAn(MaDA, TenDA) values(?, ?)";
             statement = connection.prepareCall(sql);
-            statement.setInt(1, da.getMaDA());
+            statement.setString(1, da.getMaDA());
             statement.setString(2, da.getTenDA());
             statement.execute();
             connection.close();
@@ -72,7 +72,7 @@ public class DoAnDAO {
             String sql = "update DoAn set TenDA=? where MaDA=?";
             statement = connection.prepareCall(sql);                    
             statement.setString(1, da.getTenDA());
-            statement.setInt(2, da.getMaDA());              
+            statement.setString(2, da.getMaDA());              
             statement.execute();
             connection.close();
         } catch (Exception ex) {
@@ -92,7 +92,7 @@ public class DoAnDAO {
             ResultSet resultSet = statement.executeQuery();          
             while (resultSet.next()) {                
                 DoAn da = new DoAn(
-                        resultSet.getInt("MaDA"),
+                        resultSet.getString("MaDA"),
                         resultSet.getString("TenDA"));                                
                 DoAnList.add(da);
             }

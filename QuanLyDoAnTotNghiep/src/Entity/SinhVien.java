@@ -21,14 +21,14 @@ public class SinhVien {
     public String Khoa;
     public String Nganh;
     public String MaGV;
-    public int MaDA;
+    public String MaDA;
     public float Diem;
 
     public SinhVien() {
     }
 
     public SinhVien(String MaSV, String HoDem, String TenSV, String GioiTinh, String NgaySinh, 
-            String Email, String SDT, String Khoa, String Nganh, String MaGV, int MaDA, float Diem) {
+            String Email, String SDT, String Khoa, String Nganh, String MaGV, String MaDA, float Diem) {
         this.MaSV = MaSV;
         this.HoDem = HoDem;
         this.TenSV = TenSV;
@@ -125,11 +125,11 @@ public class SinhVien {
         this.MaGV = MaGV;
     }
 
-    public int getMaDA() {
+    public String getMaDA() {
         return MaDA;
     }
 
-    public void setMaDA(int MaDA) {
+    public void setMaDA(String MaDA) {
         this.MaDA = MaDA;
     }
 

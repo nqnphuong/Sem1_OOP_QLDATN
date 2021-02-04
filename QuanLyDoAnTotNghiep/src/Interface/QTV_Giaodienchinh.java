@@ -99,7 +99,6 @@ public class QTV_Giaodienchinh extends javax.swing.JFrame {
         int option = JOptionPane.showConfirmDialog(this, "Bạn có muốn thoát không ? ");
             if (option == 0) {
                 this.dispose();
-                new DangNhap();
             }
     }//GEN-LAST:event_jButton7ActionPerformed
 

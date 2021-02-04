@@ -102,6 +102,14 @@ public class QTV_DoAn extends javax.swing.JFrame {
             }
         });
         jScrollPane1.setViewportView(jTable1);
+        if (jTable1.getColumnModel().getColumnCount() > 0) {
+            jTable1.getColumnModel().getColumn(0).setMinWidth(100);
+            jTable1.getColumnModel().getColumn(0).setPreferredWidth(100);
+            jTable1.getColumnModel().getColumn(0).setMaxWidth(100);
+            jTable1.getColumnModel().getColumn(2).setMinWidth(200);
+            jTable1.getColumnModel().getColumn(2).setPreferredWidth(200);
+            jTable1.getColumnModel().getColumn(2).setMaxWidth(200);
+        }
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 910, 330));
 
@@ -236,7 +244,7 @@ public class QTV_DoAn extends javax.swing.JFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         int row = jTable1.getSelectedRow();
         if (row >= 0) {
-            int MaDA = (int) jTable1.getValueAt(row, 0);
+            String MaDA = String.valueOf(jTable1.getValueAt(row, 0));
             String TenDA = String.valueOf(jTable1.getValueAt(row, 1));
 
             new QTV_DACapnhat(this, "CHỈNH SỬA", MaDA, TenDA);
@@ -245,14 +253,14 @@ public class QTV_DoAn extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        new QTV_DACapnhat(this, "THÊM", 0, null);
+        new QTV_DACapnhat(this, "THÊM", null, null);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         showDoAn();
 
     }//GEN-LAST:event_jButton8ActionPerformed
-    public void ThemDA(int MaDA, String TenDA) {
+    public void ThemDA(String MaDA, String TenDA) {
         showDoAn();
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables

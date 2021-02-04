@@ -1,5 +1,6 @@
 package Interface;
 
+import java.awt.event.ActionEvent;
 import javax.swing.*;
 import java.sql.*;
 import java.util.*;
@@ -100,11 +101,11 @@ public class DangNhap extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jTextField1ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
 
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButton2ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
         if (jTextField1.getText().equals("")) {
             JOptionPane.showMessageDialog(this, "Vui lòng nhập mã đăng nhập!\n", "Thông báo", JOptionPane.ERROR_MESSAGE);
@@ -135,11 +136,11 @@ public class DangNhap extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+    private void jPasswordField1ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
         jPasswordField1.setText("");
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void jButton7ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         this.dispose();
 
     }//GEN-LAST:event_jButton7ActionPerformed

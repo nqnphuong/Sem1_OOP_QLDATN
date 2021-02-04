@@ -12,7 +12,7 @@ public class QTV_SVCapnhat extends javax.swing.JFrame {
 
     public QTV_SVCapnhat(QTV_Sinhvien a, String title, String MaSV, String HoDem, String TenSV,
             String GioiTinh, String NgaySinh, String Email, String SDT, String Khoa, String Nganh,
-            String MaGV, int MaDA, float Diem) {
+            String MaGV, String MaDA, float Diem) {
         super(title);
         initComponents();
         setVisible(true);
@@ -22,11 +22,21 @@ public class QTV_SVCapnhat extends javax.swing.JFrame {
         jTextField1.setText(HoDem);
         jTextField3.setText(TenSV);
         jTextField4.setText(MaGV);
-        jTextField5.setText(Khoa);
-        jTextField6.setText(Nganh);
+        if(Khoa.equals("Khoa học máy tính")) {
+            jComboBox3.setSelectedIndex(0);
+        } else {
+            jComboBox3.setSelectedIndex(1);
+        }
+        if(Nganh.equals("Công nghệ thông tin")) {
+            jComboBox2.setSelectedIndex(0);
+        } else if(Nganh.equals("Kỹ thuật máy tính")) {
+            jComboBox2.setSelectedIndex(1);
+        } else {
+            jComboBox2.setSelectedIndex(2);
+        }
         jTextField7.setText(Email);
         jTextField8.setText(SDT);
-        jTextField10.setText(String.valueOf(MaDA));
+        jTextField10.setText(MaDA);
         jTextField11.setText(String.valueOf(Diem));
         if (GioiTinh.equals("Nữ")) {
             jComboBox1.setSelectedIndex(1);
@@ -48,9 +58,11 @@ public class QTV_SVCapnhat extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
+        jComboBox3 = new javax.swing.JComboBox<>();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -59,10 +71,8 @@ public class QTV_SVCapnhat extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jTextField11 = new javax.swing.JTextField();
         jTextField7 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
         jLabel14 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
@@ -130,6 +140,45 @@ public class QTV_SVCapnhat extends javax.swing.JFrame {
         jLabel11.setPreferredSize(new java.awt.Dimension(200, 20));
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 210, 190, 30));
 
+        jComboBox3.setBackground(new java.awt.Color(246, 172, 15));
+        jComboBox3.setEditable(true);
+        jComboBox3.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
+        jComboBox3.setForeground(new java.awt.Color(49, 34, 3));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Khoa học máy tính", "Kinh tế số & Thương mại điện tử" }));
+        jComboBox3.setPreferredSize(new java.awt.Dimension(186, 30));
+        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 240, 220, -1));
+
+        jComboBox2.setBackground(new java.awt.Color(246, 172, 15));
+        jComboBox2.setEditable(true);
+        jComboBox2.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
+        jComboBox2.setForeground(new java.awt.Color(49, 34, 3));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Công nghệ thông tin", "Kỹ thuật máy tính", "Quản trị kinh doanh" }));
+        jComboBox2.setPreferredSize(new java.awt.Dimension(186, 30));
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 240, 220, -1));
+
+        jComboBox1.setBackground(new java.awt.Color(246, 172, 15));
+        jComboBox1.setEditable(true);
+        jComboBox1.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
+        jComboBox1.setForeground(new java.awt.Color(49, 34, 3));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nam", "Nữ" }));
+        jComboBox1.setPreferredSize(new java.awt.Dimension(186, 30));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 220, -1));
+
         jTextField1.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(80, 48, 5));
         jTextField1.setPreferredSize(new java.awt.Dimension(200, 20));
@@ -149,16 +198,6 @@ public class QTV_SVCapnhat extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 220, 30));
-
-        jTextField5.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
-        jTextField5.setForeground(new java.awt.Color(80, 48, 5));
-        jTextField5.setPreferredSize(new java.awt.Dimension(200, 20));
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 240, 220, 30));
 
         jLabel8.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(80, 48, 5));
@@ -220,11 +259,6 @@ public class QTV_SVCapnhat extends javax.swing.JFrame {
         jTextField7.setPreferredSize(new java.awt.Dimension(200, 20));
         jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 170, 220, 30));
 
-        jTextField6.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
-        jTextField6.setForeground(new java.awt.Color(80, 48, 5));
-        jTextField6.setPreferredSize(new java.awt.Dimension(200, 20));
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 240, 220, 30));
-
         jLabel2.setBackground(new java.awt.Color(246, 172, 15));
         jLabel2.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 20)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(80, 48, 5));
@@ -237,19 +271,6 @@ public class QTV_SVCapnhat extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(80, 48, 5));
         jLabel3.setText("____________________________________");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 40, -1, -1));
-
-        jComboBox1.setBackground(new java.awt.Color(246, 172, 15));
-        jComboBox1.setEditable(true);
-        jComboBox1.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
-        jComboBox1.setForeground(new java.awt.Color(49, 34, 3));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nam", "Nữ" }));
-        jComboBox1.setPreferredSize(new java.awt.Dimension(186, 30));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 220, -1));
 
         jLabel14.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(80, 48, 5));
@@ -355,10 +376,6 @@ public class QTV_SVCapnhat extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField8ActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
-
     private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField10ActionPerformed
@@ -373,13 +390,13 @@ public class QTV_SVCapnhat extends javax.swing.JFrame {
         jTextField2.setText("");
         jTextField3.setText("");
         jTextField4.setText("");
-        jTextField5.setText("");
-        jTextField6.setText("");
+        jComboBox3.setSelectedIndex(0);
+        jComboBox2.setSelectedIndex(0);
         jTextField7.setText("");
         jTextField8.setText("");
         jTextField10.setText("");
         jTextField11.setText("");
-        jComboBox1.setName("");
+        jComboBox1.setSelectedIndex(0);
         jFormattedTextField1.setText("");
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -400,16 +417,16 @@ public class QTV_SVCapnhat extends javax.swing.JFrame {
             SinhVien sv = new SinhVien(jTextField2.getText(), jTextField1.getText(),
                     jTextField3.getText(), jComboBox1.getSelectedItem().toString(),
                     jFormattedTextField1.getText(), jTextField7.getText(),
-                    jTextField8.getText(), jTextField5.getText(),
-                    jTextField6.getText(), jTextField4.getText(),
-                    Integer.parseInt(jTextField10.getText()), Float.parseFloat(jTextField11.getText()));
+                    jTextField8.getText(), jComboBox3.getSelectedItem().toString(),
+                    jComboBox2.getSelectedItem().toString(), jTextField4.getText(),
+                    jTextField10.getText(), Float.parseFloat(jTextField11.getText()));
             SinhVienDAO.Them(sv);
             a.ThemSV(jTextField2.getText(), jTextField1.getText(),
                     jTextField3.getText(), jComboBox1.getSelectedItem().toString(),
                     jFormattedTextField1.getText(), jTextField7.getText(),
-                    jTextField8.getText(), jTextField5.getText(),
-                    jTextField6.getText(), jTextField4.getText(),
-                    Integer.parseInt(jTextField10.getText()), Float.parseFloat(jTextField11.getText()));
+                    jTextField8.getText(), jComboBox3.getSelectedItem().toString(),
+                    jComboBox3.getSelectedItem().toString(), jTextField4.getText(),
+                    jTextField10.getText(), Float.parseFloat(jTextField11.getText()));
             this.dispose();
         }
         if (this.getTitle() == "CHỈNH SỬA") {
@@ -417,16 +434,16 @@ public class QTV_SVCapnhat extends javax.swing.JFrame {
             SinhVien sv = new SinhVien(jTextField2.getText(), jTextField1.getText(),
                     jTextField3.getText(), jComboBox1.getSelectedItem().toString(),
                     jFormattedTextField1.getText(), jTextField7.getText(),
-                    jTextField8.getText(), jTextField5.getText(),
-                    jTextField6.getText(), jTextField4.getText(),
-                    Integer.parseInt(jTextField10.getText()), Float.parseFloat(jTextField11.getText()));
+                    jTextField8.getText(), jComboBox3.getSelectedItem().toString(),
+                    jComboBox2.getSelectedItem().toString(), jTextField4.getText(),
+                    jTextField10.getText(), Float.parseFloat(jTextField11.getText()));
             SinhVienDAO.ChinhSua(sv);
             a.ThemSV(jTextField2.getText(), jTextField1.getText(),
                     jTextField3.getText(), jComboBox1.getSelectedItem().toString(),
                     jFormattedTextField1.getText(), jTextField7.getText(),
-                    jTextField8.getText(), jTextField5.getText(),
-                    jTextField6.getText(), jTextField4.getText(),
-                    Integer.parseInt(jTextField10.getText()), Float.parseFloat(jTextField11.getText()));
+                    jTextField8.getText(), jComboBox3.getSelectedItem().toString(),
+                    jComboBox3.getSelectedItem().toString(), jTextField4.getText(),
+                    jTextField10.getText(), Float.parseFloat(jTextField11.getText()));
             this.dispose();
 
         }
@@ -436,12 +453,22 @@ public class QTV_SVCapnhat extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField4ActionPerformed
 
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox2ActionPerformed
+
+    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox3ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton7;
     private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -466,8 +493,6 @@ public class QTV_SVCapnhat extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     // End of variables declaration//GEN-END:variables

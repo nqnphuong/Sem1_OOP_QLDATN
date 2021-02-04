@@ -11,9 +11,10 @@ CREATE TABLE DangNhap (
 --	add constraint ck_DangNhap_QuyenTruyCap check (QuyenTruyCap in (N'Quản trị viên',N'Giảng viên',N'Sinh viên'))
 ----------------------------------------------------------------------
 CREATE TABLE DoAn(
-	MaDA int,
+	MaDA varchar(10),
 	TenDA nvarchar(400) NOT NULL,
-	CONSTRAINT pk_DoAn_MaDA PRIMARY KEY (MaDA)
+	CONSTRAINT pk_DoAn_MaDA PRIMARY KEY (MaDA),
+	CONSTRAINT CK_MaDA CHECK (MaDA LIKE 'DA[0-9][0-9][0-9]')
 )
 ----------------------------------------------------------------------
 create table GiangVien(
@@ -22,7 +23,8 @@ create table GiangVien(
 	TenGV nvarchar(40) not null,
 	Email varchar(30),
 	SDT varchar(30),
-	constraint pk_GiangVien_MaGV primary key(MaGV)
+	constraint pk_GiangVien_MaGV primary key(MaGV),
+	CONSTRAINT CK_MaGV CHECK (MaGV LIKE 'GV[0-9][0-9][0-9]')
 )
 ----------------------------------------------------------------------
 create table SinhVien(
@@ -33,10 +35,10 @@ create table SinhVien(
     NgaySinh date not null,
 	Email varchar(30) not null,
     SDT varchar(30) not null,
-    Khoa nvarchar(40) not null,
-    Nganh nvarchar(40) not null,
+    Khoa nvarchar(100) not null,
+    Nganh nvarchar(100) not null,
     MaGV varchar(30),
-	MaDA int,
+	MaDA varchar(10),
     Diem float,
 	constraint pk_SinhVien_MaSV primary key(MaSV)	
 )
