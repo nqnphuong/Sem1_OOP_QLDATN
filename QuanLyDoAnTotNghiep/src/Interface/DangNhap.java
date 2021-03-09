@@ -1,6 +1,7 @@
 package Interface;
 
 import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
 import javax.swing.*;
 import java.sql.*;
 import java.util.*;
@@ -11,7 +12,6 @@ public class DangNhap extends javax.swing.JFrame {
         setVisible(true);
         setResizable(false);
         setTitle("QUẢN LÝ ĐỒ ÁN TỐT NGHIỆP");
-
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -95,7 +95,7 @@ public class DangNhap extends javax.swing.JFrame {
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/DangNhap1.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 500));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 500));
 
         pack();
         setLocationRelativeTo(null);
@@ -109,13 +109,13 @@ public class DangNhap extends javax.swing.JFrame {
 
         if (jTextField1.getText().equals("")) {
             JOptionPane.showMessageDialog(this, "Vui lòng nhập mã đăng nhập!\n", "Thông báo", JOptionPane.ERROR_MESSAGE);
-        } else if (jPasswordField1.getPassword().equals("")) {
+        } else if (jPasswordField1.getText().equals("")) {
             JOptionPane.showMessageDialog(this, "Vui lòng nhập mật khẩu!\n", "Thông báo", JOptionPane.ERROR_MESSAGE);
         } else {
             try {
                 java.sql.Connection connection = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=QuanLyDoAn;user=Funny;password=201848270");
                 String sql = ("SELECT * FROM dbo.DangNhap "
-                        + "WHERE MaDN=? AND MatKhau=? ");
+                        + "WHERE MaDN=? AND MatKhau=?");
                 PreparedStatement statement = connection.prepareStatement(sql);
                 statement.setString(1, jTextField1.getText());
                 statement.setString(2, jPasswordField1.getText());
@@ -125,19 +125,17 @@ public class DangNhap extends javax.swing.JFrame {
                         new QTV_Giaodienchinh();
                 } else {
                     JOptionPane.showMessageDialog(this, "Bạn nhập sai mã đăng nhập hoặc mật khẩu!\n"
-                             + "Vui lòng nhập lại!", "Thông báo",
-                            JOptionPane.ERROR_MESSAGE);
+                             + "Vui lòng nhập lại!", "Thông báo", JOptionPane.ERROR_MESSAGE);
                 }
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
-  
         }
 
     }//GEN-LAST:event_jButton2ActionPerformed
-
+   
     private void jPasswordField1ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
-        jPasswordField1.setText("");
+
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     private void jButton7ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed

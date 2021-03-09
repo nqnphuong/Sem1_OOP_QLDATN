@@ -1,6 +1,7 @@
 
 package DAO;
 import Entity.GiangVien;
+import Entity.SinhVien;
 import java.sql.*;
 import java.util.*;
 import javax.swing.*;
@@ -111,5 +112,37 @@ public class GiangVienDAO {
             System.out.println(ex.getMessage());
         } 
         return GiangVienList;
+    }
+    public static List<SinhVien> ChiTiet(String MaGV) {
+        List<SinhVien> SinhVienList = new ArrayList<>();
+        Connection connection = null;
+        PreparedStatement statement = null;
+        try {
+            connection = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=QuanLyDoAn;user=Funny;password=201848270");
+            String sql = "select * from SinhVien where MaGV=?";
+            statement = connection.prepareCall(sql);
+            statement.setString(1, MaGV);
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                SinhVien sv = new SinhVien(
+                        resultSet.getString("MaSV"),
+                        resultSet.getString("Hodem"),
+                        resultSet.getString("TenSV"),
+                        resultSet.getString("GioiTinh"),
+                        resultSet.getString("NgaySinh"),
+                        resultSet.getString("Email"),
+                        resultSet.getString("SDT"),
+                        resultSet.getString("Khoa"),
+                        resultSet.getString("Nganh"),
+                        resultSet.getString("MaGV"),
+                        resultSet.getString("MaDA"),
+                        resultSet.getFloat("Diem"));
+                SinhVienList.add(sv);
+            }
+            connection.close();
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return SinhVienList;
     }
 }
