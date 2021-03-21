@@ -49,7 +49,7 @@ public class QTV_GVChiTiet extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jButton7 = new javax.swing.JButton();
+        bThoat = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -122,19 +122,19 @@ public class QTV_GVChiTiet extends javax.swing.JFrame {
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 910, 330));
 
-        jButton7.setBackground(new java.awt.Color(80, 48, 5));
-        jButton7.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(246, 172, 15));
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/exit.png"))); // NOI18N
-        jButton7.setText("Thoát");
-        jButton7.setBorder(null);
-        jButton7.setPreferredSize(new java.awt.Dimension(50, 25));
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        bThoat.setBackground(new java.awt.Color(80, 48, 5));
+        bThoat.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
+        bThoat.setForeground(new java.awt.Color(246, 172, 15));
+        bThoat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/exit.png"))); // NOI18N
+        bThoat.setText("Thoát");
+        bThoat.setBorder(null);
+        bThoat.setPreferredSize(new java.awt.Dimension(50, 25));
+        bThoat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                bThoatActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 430, 110, 30));
+        jPanel1.add(bThoat, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 430, 110, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/nen.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, -1));
@@ -155,18 +155,15 @@ public class QTV_GVChiTiet extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-    public void ThemSV(String MaSV, String HoDem, String TenSV, String GioiTinh, String NgaySinh,
-            String Email, String SDT, String Khoa, String Nganh, String MaGV, String MaDA, float Diem) {
-        showSinhVien();
-    }
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+   
+    private void bThoatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bThoatActionPerformed
         this.dispose();
 
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_bThoatActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton7;
+    private javax.swing.JButton bThoat;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

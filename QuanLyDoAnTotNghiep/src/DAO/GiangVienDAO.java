@@ -33,6 +33,7 @@ public class GiangVienDAO {
             }
             connection.close();
         } catch (Exception ex) {
+            System.out.println("Lấy dữ liệu bảng thất bại!");
             System.out.println(ex.getMessage());
         } 
         return GiangVienList;
@@ -67,6 +68,7 @@ public class GiangVienDAO {
             statement.execute();
             connection.close();
         } catch (Exception ex) {
+            System.out.println("Thêm thất bại!");
             System.out.println(ex.getMessage());
         } 
     }
@@ -85,6 +87,7 @@ public class GiangVienDAO {
             statement.execute();
             connection.close();
         } catch (Exception ex) {
+            System.out.println("Chỉnh sửa thất bại!");
             System.out.println(ex.getMessage());
         } 
     }

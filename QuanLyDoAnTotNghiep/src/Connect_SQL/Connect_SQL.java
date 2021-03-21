@@ -1,4 +1,4 @@
-package Connect_SQL;
+/*package Connect_SQL;
 
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
@@ -26,3 +26,4 @@ public class Connect_SQL {
         }
     }
 }
+*/

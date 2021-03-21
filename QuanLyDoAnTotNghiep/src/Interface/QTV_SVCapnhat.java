@@ -17,31 +17,32 @@ public class QTV_SVCapnhat extends javax.swing.JFrame {
         initComponents();
         setVisible(true);
         setResizable(false);
+        
         this.a = a;
-        jTextField2.setText(MaSV);
-        jTextField1.setText(HoDem);
-        jTextField3.setText(TenSV);
-        jTextField4.setText(MaGV);
+        tfMaSV.setText(MaSV);
+        tfHoDem.setText(HoDem);
+        tfTen.setText(TenSV);
+        tfMaGV.setText(MaGV);
         if(Khoa.equals("Khoa học máy tính")) {
-            jComboBox3.setSelectedIndex(0);
+            cbKhoa.setSelectedIndex(0);
         } else {
-            jComboBox3.setSelectedIndex(1);
+            cbKhoa.setSelectedIndex(1);
         }
         if(Nganh.equals("Công nghệ thông tin")) {
-            jComboBox2.setSelectedIndex(0);
+            cbNganh.setSelectedIndex(0);
         } else if(Nganh.equals("Kỹ thuật máy tính")) {
-            jComboBox2.setSelectedIndex(1);
+            cbNganh.setSelectedIndex(1);
         } else {
-            jComboBox2.setSelectedIndex(2);
+            cbNganh.setSelectedIndex(2);
         }
-        jTextField7.setText(Email);
-        jTextField8.setText(SDT);
-        jTextField10.setText(MaDA);
-        jTextField11.setText(String.valueOf(Diem));
+        tfEmail.setText(Email);
+        tfSDT.setText(SDT);
+        tfMaDA.setText(MaDA);
+        tfDiem.setText(String.valueOf(Diem));
         if (GioiTinh.equals("Nữ")) {
-            jComboBox1.setSelectedIndex(1);
+            cbGioiTinh.setSelectedIndex(1);
         }
-        jFormattedTextField1.setText(NgaySinh);
+        tfNgaySinh.setText(NgaySinh);
 
     }
 
@@ -51,35 +52,35 @@ public class QTV_SVCapnhat extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        tfTen = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        tfNgaySinh = new javax.swing.JFormattedTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        cbKhoa = new javax.swing.JComboBox<>();
+        cbNganh = new javax.swing.JComboBox<>();
+        cbGioiTinh = new javax.swing.JComboBox<>();
+        tfHoDem = new javax.swing.JTextField();
+        tfMaSV = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
+        tfSDT = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
+        tfDiem = new javax.swing.JTextField();
+        tfEmail = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        tfMaGV = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
-        jButton7 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        tfMaDA = new javax.swing.JTextField();
+        bThoat = new javax.swing.JButton();
+        bThietLapLai = new javax.swing.JButton();
+        bDongY = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -95,10 +96,10 @@ public class QTV_SVCapnhat extends javax.swing.JFrame {
         jLabel13.setText("(mm/dd/yyyy)");
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, -1, 30));
 
-        jTextField3.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
-        jTextField3.setForeground(new java.awt.Color(80, 48, 5));
-        jTextField3.setPreferredSize(new java.awt.Dimension(200, 20));
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 100, 220, 30));
+        tfTen.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
+        tfTen.setForeground(new java.awt.Color(80, 48, 5));
+        tfTen.setPreferredSize(new java.awt.Dimension(200, 20));
+        jPanel1.add(tfTen, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 100, 220, 30));
 
         jLabel12.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(80, 48, 5));
@@ -107,10 +108,10 @@ public class QTV_SVCapnhat extends javax.swing.JFrame {
         jLabel12.setPreferredSize(new java.awt.Dimension(200, 20));
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 70, 190, 30));
 
-        jFormattedTextField1.setForeground(new java.awt.Color(80, 48, 5));
-        jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("MM/dd/yyyy"))));
-        jFormattedTextField1.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
-        jPanel1.add(jFormattedTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 170, 220, 30));
+        tfNgaySinh.setForeground(new java.awt.Color(80, 48, 5));
+        tfNgaySinh.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("MM/dd/yyyy"))));
+        tfNgaySinh.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
+        jPanel1.add(tfNgaySinh, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 170, 220, 30));
 
         jLabel7.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(80, 48, 5));
@@ -140,64 +141,64 @@ public class QTV_SVCapnhat extends javax.swing.JFrame {
         jLabel11.setPreferredSize(new java.awt.Dimension(200, 20));
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 210, 190, 30));
 
-        jComboBox3.setBackground(new java.awt.Color(246, 172, 15));
-        jComboBox3.setEditable(true);
-        jComboBox3.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
-        jComboBox3.setForeground(new java.awt.Color(49, 34, 3));
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Khoa học máy tính", "Kinh tế số & Thương mại điện tử" }));
-        jComboBox3.setPreferredSize(new java.awt.Dimension(186, 30));
-        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+        cbKhoa.setBackground(new java.awt.Color(246, 172, 15));
+        cbKhoa.setEditable(true);
+        cbKhoa.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
+        cbKhoa.setForeground(new java.awt.Color(49, 34, 3));
+        cbKhoa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Khoa học máy tính", "Kinh tế số & Thương mại điện tử" }));
+        cbKhoa.setPreferredSize(new java.awt.Dimension(186, 30));
+        cbKhoa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox3ActionPerformed(evt);
+                cbKhoaActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 240, 220, -1));
+        jPanel1.add(cbKhoa, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 240, 220, -1));
 
-        jComboBox2.setBackground(new java.awt.Color(246, 172, 15));
-        jComboBox2.setEditable(true);
-        jComboBox2.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
-        jComboBox2.setForeground(new java.awt.Color(49, 34, 3));
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Công nghệ thông tin", "Kỹ thuật máy tính", "Quản trị kinh doanh" }));
-        jComboBox2.setPreferredSize(new java.awt.Dimension(186, 30));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+        cbNganh.setBackground(new java.awt.Color(246, 172, 15));
+        cbNganh.setEditable(true);
+        cbNganh.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
+        cbNganh.setForeground(new java.awt.Color(49, 34, 3));
+        cbNganh.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Công nghệ thông tin", "Kỹ thuật máy tính", "Quản trị kinh doanh" }));
+        cbNganh.setPreferredSize(new java.awt.Dimension(186, 30));
+        cbNganh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
+                cbNganhActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 240, 220, -1));
+        jPanel1.add(cbNganh, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 240, 220, -1));
 
-        jComboBox1.setBackground(new java.awt.Color(246, 172, 15));
-        jComboBox1.setEditable(true);
-        jComboBox1.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
-        jComboBox1.setForeground(new java.awt.Color(49, 34, 3));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nam", "Nữ" }));
-        jComboBox1.setPreferredSize(new java.awt.Dimension(186, 30));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        cbGioiTinh.setBackground(new java.awt.Color(246, 172, 15));
+        cbGioiTinh.setEditable(true);
+        cbGioiTinh.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
+        cbGioiTinh.setForeground(new java.awt.Color(49, 34, 3));
+        cbGioiTinh.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nam", "Nữ" }));
+        cbGioiTinh.setPreferredSize(new java.awt.Dimension(186, 30));
+        cbGioiTinh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                cbGioiTinhActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 220, -1));
+        jPanel1.add(cbGioiTinh, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 220, -1));
 
-        jTextField1.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(80, 48, 5));
-        jTextField1.setPreferredSize(new java.awt.Dimension(200, 20));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        tfHoDem.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
+        tfHoDem.setForeground(new java.awt.Color(80, 48, 5));
+        tfHoDem.setPreferredSize(new java.awt.Dimension(200, 20));
+        tfHoDem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                tfHoDemActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 100, 220, 30));
+        jPanel1.add(tfHoDem, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 100, 220, 30));
 
-        jTextField2.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(80, 48, 5));
-        jTextField2.setPreferredSize(new java.awt.Dimension(200, 20));
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        tfMaSV.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
+        tfMaSV.setForeground(new java.awt.Color(80, 48, 5));
+        tfMaSV.setPreferredSize(new java.awt.Dimension(200, 20));
+        tfMaSV.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                tfMaSVActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 220, 30));
+        jPanel1.add(tfMaSV, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 220, 30));
 
         jLabel8.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(80, 48, 5));
@@ -220,15 +221,15 @@ public class QTV_SVCapnhat extends javax.swing.JFrame {
         jLabel10.setPreferredSize(new java.awt.Dimension(200, 20));
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 210, 190, 30));
 
-        jTextField8.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
-        jTextField8.setForeground(new java.awt.Color(80, 48, 5));
-        jTextField8.setPreferredSize(new java.awt.Dimension(200, 20));
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+        tfSDT.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
+        tfSDT.setForeground(new java.awt.Color(80, 48, 5));
+        tfSDT.setPreferredSize(new java.awt.Dimension(200, 20));
+        tfSDT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
+                tfSDTActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 220, 30));
+        jPanel1.add(tfSDT, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 220, 30));
 
         jLabel6.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(80, 48, 5));
@@ -244,20 +245,20 @@ public class QTV_SVCapnhat extends javax.swing.JFrame {
         jLabel16.setPreferredSize(new java.awt.Dimension(200, 20));
         jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 290, 190, 30));
 
-        jTextField11.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
-        jTextField11.setForeground(new java.awt.Color(80, 48, 5));
-        jTextField11.setPreferredSize(new java.awt.Dimension(200, 20));
-        jTextField11.addActionListener(new java.awt.event.ActionListener() {
+        tfDiem.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
+        tfDiem.setForeground(new java.awt.Color(80, 48, 5));
+        tfDiem.setPreferredSize(new java.awt.Dimension(200, 20));
+        tfDiem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField11ActionPerformed(evt);
+                tfDiemActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 320, 220, 30));
+        jPanel1.add(tfDiem, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 320, 220, 30));
 
-        jTextField7.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
-        jTextField7.setForeground(new java.awt.Color(80, 48, 5));
-        jTextField7.setPreferredSize(new java.awt.Dimension(200, 20));
-        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 170, 220, 30));
+        tfEmail.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
+        tfEmail.setForeground(new java.awt.Color(80, 48, 5));
+        tfEmail.setPreferredSize(new java.awt.Dimension(200, 20));
+        jPanel1.add(tfEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 170, 220, 30));
 
         jLabel2.setBackground(new java.awt.Color(246, 172, 15));
         jLabel2.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 20)); // NOI18N
@@ -279,15 +280,15 @@ public class QTV_SVCapnhat extends javax.swing.JFrame {
         jLabel14.setPreferredSize(new java.awt.Dimension(200, 20));
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 190, 30));
 
-        jTextField4.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
-        jTextField4.setForeground(new java.awt.Color(80, 48, 5));
-        jTextField4.setPreferredSize(new java.awt.Dimension(200, 20));
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        tfMaGV.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
+        tfMaGV.setForeground(new java.awt.Color(80, 48, 5));
+        tfMaGV.setPreferredSize(new java.awt.Dimension(200, 20));
+        tfMaGV.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                tfMaGVActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, 220, 30));
+        jPanel1.add(tfMaGV, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, 220, 30));
 
         jLabel15.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(80, 48, 5));
@@ -296,57 +297,57 @@ public class QTV_SVCapnhat extends javax.swing.JFrame {
         jLabel15.setPreferredSize(new java.awt.Dimension(200, 20));
         jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 290, 190, 30));
 
-        jTextField10.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
-        jTextField10.setForeground(new java.awt.Color(80, 48, 5));
-        jTextField10.setPreferredSize(new java.awt.Dimension(200, 20));
-        jTextField10.addActionListener(new java.awt.event.ActionListener() {
+        tfMaDA.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
+        tfMaDA.setForeground(new java.awt.Color(80, 48, 5));
+        tfMaDA.setPreferredSize(new java.awt.Dimension(200, 20));
+        tfMaDA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField10ActionPerformed(evt);
+                tfMaDAActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 320, 220, 30));
+        jPanel1.add(tfMaDA, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 320, 220, 30));
 
-        jButton7.setBackground(new java.awt.Color(80, 48, 5));
-        jButton7.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(246, 172, 15));
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/exit.png"))); // NOI18N
-        jButton7.setText("Thoát");
-        jButton7.setBorder(null);
-        jButton7.setPreferredSize(new java.awt.Dimension(50, 25));
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        bThoat.setBackground(new java.awt.Color(80, 48, 5));
+        bThoat.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
+        bThoat.setForeground(new java.awt.Color(246, 172, 15));
+        bThoat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/exit.png"))); // NOI18N
+        bThoat.setText("Thoát");
+        bThoat.setBorder(null);
+        bThoat.setPreferredSize(new java.awt.Dimension(50, 25));
+        bThoat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                bThoatActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 430, 120, 30));
+        jPanel1.add(bThoat, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 430, 120, 30));
 
-        jButton4.setBackground(new java.awt.Color(246, 172, 15));
-        jButton4.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(80, 48, 5));
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/refresh-page-option.png"))); // NOI18N
-        jButton4.setText("Thiết lập lại");
-        jButton4.setBorder(null);
-        jButton4.setPreferredSize(new java.awt.Dimension(50, 25));
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        bThietLapLai.setBackground(new java.awt.Color(246, 172, 15));
+        bThietLapLai.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
+        bThietLapLai.setForeground(new java.awt.Color(80, 48, 5));
+        bThietLapLai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/refresh-page-option.png"))); // NOI18N
+        bThietLapLai.setText("Thiết lập lại");
+        bThietLapLai.setBorder(null);
+        bThietLapLai.setPreferredSize(new java.awt.Dimension(50, 25));
+        bThietLapLai.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                bThietLapLaiActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 430, 120, 30));
+        jPanel1.add(bThietLapLai, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 430, 120, 30));
 
-        jButton5.setBackground(new java.awt.Color(246, 172, 15));
-        jButton5.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(80, 48, 5));
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/check-mark.png"))); // NOI18N
-        jButton5.setText("Đồng ý");
-        jButton5.setBorder(null);
-        jButton5.setPreferredSize(new java.awt.Dimension(50, 25));
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        bDongY.setBackground(new java.awt.Color(246, 172, 15));
+        bDongY.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
+        bDongY.setForeground(new java.awt.Color(80, 48, 5));
+        bDongY.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/check-mark.png"))); // NOI18N
+        bDongY.setText("Đồng ý");
+        bDongY.setBorder(null);
+        bDongY.setPreferredSize(new java.awt.Dimension(50, 25));
+        bDongY.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                bDongYActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 430, 120, 30));
+        jPanel1.add(bDongY, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 430, 120, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/nen.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -368,108 +369,97 @@ public class QTV_SVCapnhat extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void cbGioiTinhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbGioiTinhActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_cbGioiTinhActionPerformed
 
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+    private void tfSDTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSDTActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
+    }//GEN-LAST:event_tfSDTActionPerformed
 
-    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
+    private void tfMaDAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfMaDAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField10ActionPerformed
+    }//GEN-LAST:event_tfMaDAActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void bThoatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bThoatActionPerformed
         this.dispose();
 
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_bThoatActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        jTextField1.setText("");
-        jTextField2.setText("");
-        jTextField3.setText("");
-        jTextField4.setText("");
-        jComboBox3.setSelectedIndex(0);
-        jComboBox2.setSelectedIndex(0);
-        jTextField7.setText("");
-        jTextField8.setText("");
-        jTextField10.setText("");
-        jTextField11.setText("");
-        jComboBox1.setSelectedIndex(0);
-        jFormattedTextField1.setText("");
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void bThietLapLaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bThietLapLaiActionPerformed
+        tfHoDem.setText("");
+        tfMaSV.setText("");
+        tfTen.setText("");
+        tfMaGV.setText("");
+        cbKhoa.setSelectedIndex(0);
+        cbNganh.setSelectedIndex(0);
+        tfEmail.setText("");
+        tfSDT.setText("");
+        tfMaDA.setText("");
+        tfDiem.setText("");
+        cbGioiTinh.setSelectedIndex(0);
+        tfNgaySinh.setText("");
+    }//GEN-LAST:event_bThietLapLaiActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void tfMaSVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfMaSVActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_tfMaSVActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void tfHoDemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfHoDemActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_tfHoDemActionPerformed
 
-    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
+    private void tfDiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfDiemActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField11ActionPerformed
+    }//GEN-LAST:event_tfDiemActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void bDongYActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDongYActionPerformed
         if (this.getTitle() == "THÊM") {
-            SinhVien sv = new SinhVien(jTextField2.getText(), jTextField1.getText(),
-                    jTextField3.getText(), jComboBox1.getSelectedItem().toString(),
-                    jFormattedTextField1.getText(), jTextField7.getText(),
-                    jTextField8.getText(), jComboBox3.getSelectedItem().toString(),
-                    jComboBox2.getSelectedItem().toString(), jTextField4.getText(),
-                    jTextField10.getText(), Float.parseFloat(jTextField11.getText()));
+            SinhVien sv = new SinhVien(tfMaSV.getText(), tfHoDem.getText(),
+                    tfTen.getText(), cbGioiTinh.getSelectedItem().toString(),
+                    tfNgaySinh.getText(), tfEmail.getText(),
+                    tfSDT.getText(), cbKhoa.getSelectedItem().toString(),
+                    cbNganh.getSelectedItem().toString(), tfMaGV.getText(),
+                    tfMaDA.getText(), Float.parseFloat(tfDiem.getText()));
             SinhVienDAO.Them(sv);
-            a.ThemSV(jTextField2.getText(), jTextField1.getText(),
-                    jTextField3.getText(), jComboBox1.getSelectedItem().toString(),
-                    jFormattedTextField1.getText(), jTextField7.getText(),
-                    jTextField8.getText(), jComboBox3.getSelectedItem().toString(),
-                    jComboBox3.getSelectedItem().toString(), jTextField4.getText(),
-                    jTextField10.getText(), Float.parseFloat(jTextField11.getText()));
+            a.CapNhat();
             this.dispose();
+            
         }
         if (this.getTitle() == "CHỈNH SỬA") {
-
-            SinhVien sv = new SinhVien(jTextField2.getText(), jTextField1.getText(),
-                    jTextField3.getText(), jComboBox1.getSelectedItem().toString(),
-                    jFormattedTextField1.getText(), jTextField7.getText(),
-                    jTextField8.getText(), jComboBox3.getSelectedItem().toString(),
-                    jComboBox2.getSelectedItem().toString(), jTextField4.getText(),
-                    jTextField10.getText(), Float.parseFloat(jTextField11.getText()));
+            SinhVien sv = new SinhVien(tfMaSV.getText(), tfHoDem.getText(),
+                    tfTen.getText(), cbGioiTinh.getSelectedItem().toString(),
+                    tfNgaySinh.getText(), tfEmail.getText(),
+                    tfSDT.getText(), cbKhoa.getSelectedItem().toString(),
+                    cbNganh.getSelectedItem().toString(), tfMaGV.getText(),
+                    tfMaDA.getText(), Float.parseFloat(tfDiem.getText()));
             SinhVienDAO.ChinhSua(sv);
-            a.ThemSV(jTextField2.getText(), jTextField1.getText(),
-                    jTextField3.getText(), jComboBox1.getSelectedItem().toString(),
-                    jFormattedTextField1.getText(), jTextField7.getText(),
-                    jTextField8.getText(), jComboBox3.getSelectedItem().toString(),
-                    jComboBox3.getSelectedItem().toString(), jTextField4.getText(),
-                    jTextField10.getText(), Float.parseFloat(jTextField11.getText()));
+            a.CapNhat();
             this.dispose();
 
         }
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_bDongYActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void tfMaGVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfMaGVActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_tfMaGVActionPerformed
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+    private void cbNganhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbNganhActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
+    }//GEN-LAST:event_cbNganhActionPerformed
 
-    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox3ActionPerformed
+    private void cbKhoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbKhoaActionPerformed
+
+    }//GEN-LAST:event_cbKhoaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JFormattedTextField jFormattedTextField1;
+    private javax.swing.JButton bDongY;
+    private javax.swing.JButton bThietLapLai;
+    private javax.swing.JButton bThoat;
+    private javax.swing.JComboBox<String> cbGioiTinh;
+    private javax.swing.JComboBox<String> cbKhoa;
+    private javax.swing.JComboBox<String> cbNganh;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -487,14 +477,15 @@ public class QTV_SVCapnhat extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField tfDiem;
+    private javax.swing.JTextField tfEmail;
+    private javax.swing.JTextField tfHoDem;
+    private javax.swing.JTextField tfMaDA;
+    private javax.swing.JTextField tfMaGV;
+    private javax.swing.JTextField tfMaSV;
+    private javax.swing.JFormattedTextField tfNgaySinh;
+    private javax.swing.JTextField tfSDT;
+    private javax.swing.JTextField tfTen;
     // End of variables declaration//GEN-END:variables
 
 }

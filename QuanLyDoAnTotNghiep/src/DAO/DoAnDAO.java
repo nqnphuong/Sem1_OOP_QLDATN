@@ -28,6 +28,7 @@ public class DoAnDAO {
             }
             connection.close();
         } catch (Exception ex) {
+            System.out.println("Lấy dữ liệu bảng thất bại!");
             System.out.println(ex.getMessage());
         } 
         return DoAnList;
@@ -59,7 +60,8 @@ public class DoAnDAO {
             statement.setString(2, da.getTenDA());
             statement.execute();
             connection.close();
-        } catch (Exception ex) {          
+        } catch (Exception ex) {        
+            System.out.println("Thêm thất bại!");
             System.out.println(ex.getMessage());
         } 
     }
@@ -76,6 +78,7 @@ public class DoAnDAO {
             statement.execute();
             connection.close();
         } catch (Exception ex) {
+            System.out.println("Chỉnh sửa thất bại!");
             System.out.println(ex.getMessage());
         } 
     }

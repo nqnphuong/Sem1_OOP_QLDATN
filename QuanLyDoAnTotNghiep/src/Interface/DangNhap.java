@@ -17,10 +17,10 @@ public class DangNhap extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jButton7 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        tfMatKhau = new javax.swing.JPasswordField();
+        bThoat = new javax.swing.JButton();
+        bDangNhap = new javax.swing.JButton();
+        tfMaDangNhap = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -30,50 +30,50 @@ public class DangNhap extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPasswordField1.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
-        jPasswordField1.setForeground(new java.awt.Color(80, 48, 5));
-        jPasswordField1.setPreferredSize(new java.awt.Dimension(142, 30));
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+        tfMatKhau.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        tfMatKhau.setForeground(new java.awt.Color(80, 48, 5));
+        tfMatKhau.setPreferredSize(new java.awt.Dimension(142, 30));
+        tfMatKhau.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
+                tfMatKhauActionPerformed(evt);
             }
         });
-        getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 290, 270, -1));
+        getContentPane().add(tfMatKhau, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 290, 270, -1));
 
-        jButton7.setBackground(new java.awt.Color(80, 48, 5));
-        jButton7.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(246, 172, 15));
-        jButton7.setText("THOÁT");
-        jButton7.setBorder(null);
-        jButton7.setPreferredSize(new java.awt.Dimension(50, 25));
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        bThoat.setBackground(new java.awt.Color(80, 48, 5));
+        bThoat.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
+        bThoat.setForeground(new java.awt.Color(246, 172, 15));
+        bThoat.setText("THOÁT");
+        bThoat.setBorder(null);
+        bThoat.setPreferredSize(new java.awt.Dimension(50, 25));
+        bThoat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                bThoatActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 350, 130, 30));
+        getContentPane().add(bThoat, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 350, 130, 30));
 
-        jButton2.setBackground(new java.awt.Color(246, 172, 15));
-        jButton2.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(80, 48, 5));
-        jButton2.setText("ĐĂNG NHẬP");
-        jButton2.setBorder(null);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        bDangNhap.setBackground(new java.awt.Color(246, 172, 15));
+        bDangNhap.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 18)); // NOI18N
+        bDangNhap.setForeground(new java.awt.Color(80, 48, 5));
+        bDangNhap.setText("ĐĂNG NHẬP");
+        bDangNhap.setBorder(null);
+        bDangNhap.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                bDangNhapActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, 130, 30));
+        getContentPane().add(bDangNhap, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, 130, 30));
 
-        jTextField1.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(49, 34, 3));
-        jTextField1.setPreferredSize(new java.awt.Dimension(7, 30));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        tfMaDangNhap.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
+        tfMaDangNhap.setForeground(new java.awt.Color(49, 34, 3));
+        tfMaDangNhap.setPreferredSize(new java.awt.Dimension(7, 30));
+        tfMaDangNhap.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                tfMaDangNhapActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 270, -1));
+        getContentPane().add(tfMaDangNhap, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 270, -1));
 
         jLabel5.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 13)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(49, 34, 3));
@@ -101,15 +101,15 @@ public class DangNhap extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void tfMaDangNhapActionPerformed(ActionEvent evt) {//GEN-FIRST:event_tfMaDangNhapActionPerformed
 
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_tfMaDangNhapActionPerformed
 
-    private void jButton2ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void bDangNhapActionPerformed(ActionEvent evt) {//GEN-FIRST:event_bDangNhapActionPerformed
 
-        if (jTextField1.getText().equals("")) {
+        if (tfMaDangNhap.getText().equals("")) {
             JOptionPane.showMessageDialog(this, "Vui lòng nhập mã đăng nhập!\n", "Thông báo", JOptionPane.ERROR_MESSAGE);
-        } else if (jPasswordField1.getText().equals("")) {
+        } else if (tfMatKhau.getText().equals("")) {
             JOptionPane.showMessageDialog(this, "Vui lòng nhập mật khẩu!\n", "Thông báo", JOptionPane.ERROR_MESSAGE);
         } else {
             try {
@@ -117,8 +117,8 @@ public class DangNhap extends javax.swing.JFrame {
                 String sql = ("SELECT * FROM dbo.DangNhap "
                         + "WHERE MaDN=? AND MatKhau=?");
                 PreparedStatement statement = connection.prepareStatement(sql);
-                statement.setString(1, jTextField1.getText());
-                statement.setString(2, jPasswordField1.getText());
+                statement.setString(1, tfMaDangNhap.getText());
+                statement.setString(2, tfMatKhau.getText());
                 ResultSet resultSet = statement.executeQuery();
                 if (resultSet.next()) {
                         this.dispose();
@@ -132,25 +132,25 @@ public class DangNhap extends javax.swing.JFrame {
             }
         }
 
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_bDangNhapActionPerformed
    
-    private void jPasswordField1ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+    private void tfMatKhauActionPerformed(ActionEvent evt) {//GEN-FIRST:event_tfMatKhauActionPerformed
 
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+    }//GEN-LAST:event_tfMatKhauActionPerformed
 
-    private void jButton7ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void bThoatActionPerformed(ActionEvent evt) {//GEN-FIRST:event_bThoatActionPerformed
         this.dispose();
 
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_bThoatActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton7;
+    private javax.swing.JButton bDangNhap;
+    private javax.swing.JButton bThoat;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField tfMaDangNhap;
+    private javax.swing.JPasswordField tfMatKhau;
     // End of variables declaration//GEN-END:variables
 }

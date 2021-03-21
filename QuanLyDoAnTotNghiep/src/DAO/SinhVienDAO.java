@@ -34,6 +34,7 @@ public class SinhVienDAO {
             }
             connection.close();
         } catch (Exception ex) {
+            System.out.println("Lấy dữ liệu bảng thất bại!");
             System.out.println(ex.getMessage());
         } 
         return SinhVienList;
@@ -76,6 +77,7 @@ public class SinhVienDAO {
             statement.execute();
             connection.close();
         } catch (Exception ex) {
+            System.out.println("Thêm thất bại!");
             System.out.println(ex.getMessage());
         } 
     }
@@ -102,6 +104,7 @@ public class SinhVienDAO {
             statement.execute();
             connection.close();
         } catch (Exception ex) {
+            System.out.println("Chỉnh sửa thất bại!");
             System.out.println(ex.getMessage());
         } 
     }
@@ -112,7 +115,6 @@ public class SinhVienDAO {
         PreparedStatement statement = null;
         try {
             connection = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=QuanLyDoAn;user=Funny;password=201848270");
-            //query
             String sql = "select * from SinhVien where TenSV like ?";
             statement = connection.prepareCall(sql);
             statement.setString(1, "%" + TenSV + "%");

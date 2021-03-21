@@ -16,8 +16,8 @@ public class QTV_DACapnhat extends javax.swing.JFrame {
         setVisible(true);
         setResizable(false);
         this.a = a;
-        jTextField1.setText(MaDA);
-        jTextField2.setText(TenDA);
+        tfMaDA.setText(MaDA);
+        tfTenDA.setText(TenDA);
     }
 
     @SuppressWarnings("unchecked")
@@ -25,15 +25,15 @@ public class QTV_DACapnhat extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jTextField2 = new javax.swing.JTextField();
+        tfTenDA = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        tfMaDA = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        bThoat = new javax.swing.JButton();
+        bThietLapLai = new javax.swing.JButton();
+        bDongY = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -44,15 +44,15 @@ public class QTV_DACapnhat extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(650, 440));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField2.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(80, 48, 5));
-        jTextField2.setPreferredSize(new java.awt.Dimension(200, 20));
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        tfTenDA.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
+        tfTenDA.setForeground(new java.awt.Color(80, 48, 5));
+        tfTenDA.setPreferredSize(new java.awt.Dimension(200, 20));
+        tfTenDA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                tfTenDAActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 440, 30));
+        jPanel1.add(tfTenDA, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 440, 30));
 
         jLabel6.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(80, 48, 5));
@@ -68,15 +68,15 @@ public class QTV_DACapnhat extends javax.swing.JFrame {
         jLabel5.setPreferredSize(new java.awt.Dimension(200, 20));
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 410, 30));
 
-        jTextField1.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(80, 48, 5));
-        jTextField1.setPreferredSize(new java.awt.Dimension(200, 20));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        tfMaDA.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
+        tfMaDA.setForeground(new java.awt.Color(80, 48, 5));
+        tfMaDA.setPreferredSize(new java.awt.Dimension(200, 20));
+        tfMaDA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                tfMaDAActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 440, 30));
+        jPanel1.add(tfMaDA, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 440, 30));
 
         jLabel2.setBackground(new java.awt.Color(246, 172, 15));
         jLabel2.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 20)); // NOI18N
@@ -91,47 +91,47 @@ public class QTV_DACapnhat extends javax.swing.JFrame {
         jLabel3.setText("____________________________________");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, -1, -1));
 
-        jButton7.setBackground(new java.awt.Color(80, 48, 5));
-        jButton7.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(246, 172, 15));
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/exit.png"))); // NOI18N
-        jButton7.setText("Thoát");
-        jButton7.setBorder(null);
-        jButton7.setPreferredSize(new java.awt.Dimension(50, 25));
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        bThoat.setBackground(new java.awt.Color(80, 48, 5));
+        bThoat.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
+        bThoat.setForeground(new java.awt.Color(246, 172, 15));
+        bThoat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/exit.png"))); // NOI18N
+        bThoat.setText("Thoát");
+        bThoat.setBorder(null);
+        bThoat.setPreferredSize(new java.awt.Dimension(50, 25));
+        bThoat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                bThoatActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 240, 120, 30));
+        jPanel1.add(bThoat, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 240, 120, 30));
 
-        jButton4.setBackground(new java.awt.Color(246, 172, 15));
-        jButton4.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(80, 48, 5));
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/refresh-page-option.png"))); // NOI18N
-        jButton4.setText("Thiết lập lại");
-        jButton4.setBorder(null);
-        jButton4.setPreferredSize(new java.awt.Dimension(50, 25));
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        bThietLapLai.setBackground(new java.awt.Color(246, 172, 15));
+        bThietLapLai.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
+        bThietLapLai.setForeground(new java.awt.Color(80, 48, 5));
+        bThietLapLai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/refresh-page-option.png"))); // NOI18N
+        bThietLapLai.setText("Thiết lập lại");
+        bThietLapLai.setBorder(null);
+        bThietLapLai.setPreferredSize(new java.awt.Dimension(50, 25));
+        bThietLapLai.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                bThietLapLaiActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 120, 30));
+        jPanel1.add(bThietLapLai, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 120, 30));
 
-        jButton5.setBackground(new java.awt.Color(246, 172, 15));
-        jButton5.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(80, 48, 5));
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/check-mark.png"))); // NOI18N
-        jButton5.setText("Đồng ý");
-        jButton5.setBorder(null);
-        jButton5.setPreferredSize(new java.awt.Dimension(50, 25));
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        bDongY.setBackground(new java.awt.Color(246, 172, 15));
+        bDongY.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
+        bDongY.setForeground(new java.awt.Color(80, 48, 5));
+        bDongY.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/check-mark.png"))); // NOI18N
+        bDongY.setText("Đồng ý");
+        bDongY.setBorder(null);
+        bDongY.setPreferredSize(new java.awt.Dimension(50, 25));
+        bDongY.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                bDongYActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 120, 30));
+        jPanel1.add(bDongY, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 120, 30));
 
         jLabel13.setFont(new java.awt.Font("#9Slide03 Varela Round", 0, 15)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(138, 102, 53));
@@ -153,52 +153,52 @@ public class QTV_DACapnhat extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void bDongYActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDongYActionPerformed
         if (this.getTitle() == "THÊM") {
-            DoAn da = new DoAn(jTextField1.getText(),jTextField2.getText());
+            DoAn da = new DoAn(tfMaDA.getText(),tfTenDA.getText());
             DoAnDAO.Them(da);
-            a.ThemDA(jTextField1.getText(),jTextField2.getText());
+            a.CapNhat();
             this.dispose();
         }
         if (this.getTitle() == "CHỈNH SỬA") {
-            DoAn da = new DoAn(jTextField1.getText(),jTextField2.getText());
+            DoAn da = new DoAn(tfMaDA.getText(),tfTenDA.getText());
             DoAnDAO.ChinhSua(da);
-            a.ThemDA(jTextField1.getText(),jTextField2.getText());
+            a.CapNhat();
             this.dispose();
         }
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_bDongYActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        jTextField1.setText("");
-        jTextField2.setText("");
+    private void bThietLapLaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bThietLapLaiActionPerformed
+        tfMaDA.setText("");
+        tfTenDA.setText("");
           
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_bThietLapLaiActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void bThoatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bThoatActionPerformed
         this.dispose();
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_bThoatActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void tfMaDAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfMaDAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_tfMaDAActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void tfTenDAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfTenDAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_tfTenDAActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton7;
+    private javax.swing.JButton bDongY;
+    private javax.swing.JButton bThietLapLai;
+    private javax.swing.JButton bThoat;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField tfMaDA;
+    private javax.swing.JTextField tfTenDA;
     // End of variables declaration//GEN-END:variables
 
 }
