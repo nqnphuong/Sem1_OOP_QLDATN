@@ -61,7 +61,7 @@ public class DoAnDAO {
             statement.execute();
             connection.close();
         } catch (Exception ex) {        
-            System.out.println("Thêm thất bại!");
+            JOptionPane.showMessageDialog(null, "Thêm thông tin thất bại !"); 
             System.out.println(ex.getMessage());
         } 
     }
@@ -78,7 +78,7 @@ public class DoAnDAO {
             statement.execute();
             connection.close();
         } catch (Exception ex) {
-            System.out.println("Chỉnh sửa thất bại!");
+            JOptionPane.showMessageDialog(null, "Chỉnh sửa thông tin thất bại !");
             System.out.println(ex.getMessage());
         } 
     }
